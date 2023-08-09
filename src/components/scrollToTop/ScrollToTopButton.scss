@@ -1,0 +1,16 @@
+.scroll-to-top-button {
+    opacity: 0;
+    right: 20px;
+    bottom: 80px;
+    position: fixed;
+    padding: 10px 15px;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    font-size: var(--mainFontSize);
+    border-radius: var(--borderRadius);
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}

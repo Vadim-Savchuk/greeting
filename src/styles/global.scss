@@ -1,0 +1,129 @@
+@import './normalize.scss';
+
+:root {
+    --mainFont: cursive;
+    --borderRadius: 12px;
+    --mainFontSize: 18px;
+    --lineHeight: normal;
+}
+
+body[data-thema='light'] {
+    --color: #000;
+    --elemColor: #a60c36;
+    --mainBackgroundColor: linear-gradient(110deg, #acc9ff, #20a8d8);
+    --boxShadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+body[data-thema='dark'] {
+    --color: #fff;
+    --elemColor: #fff;
+    --mainBackgroundColor: linear-gradient(110deg, #a60c36, #002a4d);
+    --boxShadow: rgba(255, 255, 255, 0.5) 0px 10px 20px, rgba(255, 255, 255, 0.5) 0px 6px 6px;
+}
+
+body {
+    color: var(--color);
+    font-family: var(--mainFont);
+    line-height: var(--lineHeight);
+    font-size: var(--mainFontSize);
+    background: var(--mainBackgroundColor);
+    
+
+    background-size: 400% 400%;
+    animation: AnimationName 25s ease infinite;
+}
+
+main {
+    flex: 1;
+    padding: 20px 0px;
+}
+
+#root,
+.container {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.scroll-to-top {
+    right: 30px;
+    bottom: 80px;
+    position: fixed;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 23%
+    }
+
+    50% {
+        background-position: 100% 78%
+    }
+
+    100% {
+        background-position: 0% 23%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 23%
+    }
+
+    50% {
+        background-position: 100% 78%
+    }
+
+    100% {
+        background-position: 0% 23%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 23%
+    }
+
+    50% {
+        background-position: 100% 78%
+    }
+
+    100% {
+        background-position: 0% 23%
+    }
+}
+
+
+// Scroll==============================
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: var(--borderRadius);
+}

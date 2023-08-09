@@ -1,0 +1,17 @@
+.list {
+    gap: 40px;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+
+    .elem {
+        width: 100%;
+        max-width: 600px;
+        padding: 15px 0px;
+        text-align: start;
+        white-space: pre-line;
+        color: var(--elemColor);
+        border-bottom: 2px dotted #0000ff;
+    }
+}
